@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오태흔의 프로필</title>
+    <style>
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            align-self: left;
+            /* 비율 유지 */
+        }
+
+        .titles {
+            text-align: left;
+        }
+        .titles h3 {
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .titles h4 {
+            margin-left: 20px;
+        }
+        .titles div {
+            margin-left: 40px;
+        }
+        .titles textarea {
+            margin-left: 40px;
+        }
+
+        .footer-license {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>졸도</h1>
+        <nav>
+            <ul>
+                <a href="index.html">
+                    <li>홈</li>
+                </a>
+                <a href="#">
+                    <li>소개</li>
+                </a>
+                <a href="#">
+                    <li>연락처</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>자기소개</h2>
+            <img class="responsive-img" src="dog.jpg" width="50%">
+            <p>
+            <h3>안녕하세요. 수영구에 사는 <strong>오태흔</strong>입니다.</h3>
+            </p>
+        </section>
+        <section class="titles">
+            <h3>좋아하는 것</h3>
+            <div>
+                <ul>
+                    <li>휴식</li>
+                    <li>휴식</li>
+                    <li>휴식</li>
+                </ul>
+            </div>
+        </section>
+        <section class="titles">
+            <h3>이력/경력</h3>
+            <div>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>년도</th>
+                            <th>회사명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>201?~201?</td>
+                            <td>넥스젠</td>
+                        </tr>
+                        <tr>
+                            <td>2017~2019</td>
+                            <td>제이코퍼레이션</td>
+                        </tr>
+                        <tr>
+                            <td>2019~2025</td>
+                            <td>론픽</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="titles">
+            <h3>좋아하는 영상</h3>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/JZ3NsKKdiKo?si=A0wdEJ8v_r_4bGwv"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="titles">
+            <form>
+                <h3>문의하기</h3>
+                <div>
+                    <input type="text" placeholder="이름을 입력하세요." />
+                </div>
+                <div>
+                    <input type="email" placeholder="example@mail.com" />
+                </div>
+                <h4>문의 내용</h4>
+                <textarea id="textArea" name="textValue" placeholder="문의 내용을 입력하세요." rows="10" cols="100"></textarea>
+                <div>
+                    <input type="submit" value="전송하기" />
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="footer-license">
+        Copyright 2025
+    </footer>
+</body>
+
+</html>

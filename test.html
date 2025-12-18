@@ -86,9 +86,9 @@
         <section>
             <h2>폼 태그 내부의 input 태그 예시6 -type="radio"</h2>
             <input type="radio" id="male" name="gender" value="m"> <label for="male">남성</label>
-            <input type="radio" id="male2" name="gender" value="m"> <label for="male">남성2</label>
+            <input type="radio" id="male2" name="gender" value="m"> <label for="male2">남성2</label>
             <input type="radio" id="female" name="gender" value="f"> <label for="female">여성</label>
-            <input type="radio" id="female2" name="gender" value="f"> <label for="female">여성2</label>
+            <input type="radio" id="female2" name="gender" value="f"> <label for="female2">여성2</label>
         </section>
         <section>
             <h2>폼 태그 내부의 input 태그 예시7 -type="file"</h2>
@@ -150,6 +150,110 @@
                     <option value="tomato">토마토</option>
                 </optgroup>
             </select>
+        </section>
+        <section>
+            <h2>테이블 태그 예시1</h2>
+            <table border="1">
+                <tr>
+                    <th>이름</th>
+                    <th>나이</th>
+                </tr>
+                <tr>
+                    <td>김철수</td>
+                    <td>20세</td>
+                </tr>
+            </table>
+
+        </section>
+
+        <section>
+            <h2>테이블 태그 예시2, 표가 길어질 경우, 검색 엔진이 구조 파악하기 용이함. 권장방식.!! </h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>사용자명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>홍길동</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>성춘향</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section>
+            <h2>테이블 태그 예시3 가로, 세로 병합, 캡션 제목 보여주기 </h2>
+            <table border="1">
+                <caption>주간 식단표</caption>
+                <thead>
+                    <tr>
+                        <th>시간</th>
+                        <th>월요일</th>
+                        <th>화요일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>점심</td>
+                        <td rowspan="2">비빔밥 (세로 병합)</td>
+                        <td>김치찌개</td>
+                    </tr>
+                    <tr>
+                        <td>저녁</td>
+                        <td>된장찌개</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align:center;">※ 주말 식단은 추후 공지</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section>
+            <h2>iframe 태그 예시1 다른 사이트 띄우기</h2>
+            <div>
+                <iframe src="https://nate.com" width="600" height="400"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>iframe 태그 예시2 다른 사이트 띄우기 테두리가 없음</h2>
+            <div>
+                <iframe src="https://nate.com" style="border:none;" width="600" height="400"></iframe>
+            </div>
+        </section>
+        <section>
+            <h2>iframe 태그 예시3 유튜브 영상 퍼오기</h2>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/x-kp5SXBOEU?si=AsAuMlepvPYWmV6G"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section>
+            <h2>iframe 태그 예시4 구글지도 퍼오기</h2>
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2306.6265659907654!2d129.05994738550177!3d35.155060182770306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568eb6feb39fa0d%3A0x17502eaffb28a5b4!2z67aA7IKwSVTqtZDsnKHshLzthLA!5e0!3m2!1sko!2skr!4v1766028431458!5m2!1sko!2skr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section>
+            <h2>iframe 태그 예시5 pdf 파일 뷰어 </h2>
+
+            <div><iframe src="1_HTML_1-완성_part_1(메모).pdf" width="600" height="450" style="border:0;"></iframe></div>
+
         </section>
     </main>
 
