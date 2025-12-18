@@ -5,30 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
     <style>
-        /* 1. 태그 선택자: 모든 p 태그에 적용 */
+        /* 문서 전체 기본 폰트 설정 */
+        body {
+            /* font-family: 'Arial', sans-serif; */
+            font-family: "Black Han Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+
+        }
+
+        /* 제목 스타일링 */
+        h1 {
+            font-weight: bold;
+            /* 굵게 */
+            text-decoration: underline;
+            /* 밑줄 */
+            font-style: italic;
+            /* 기울임 */
+        }
+
+        /* 본문 스타일링 */
         p {
-            color: gray;
+            font-size: 16px;
+            line-height: 1.8;
+            /* 줄 간격을 글자 크기의 1.6배로 설정 (읽기 편함) */
+            font-weight: 400;
+            /* 기본 두께 */
         }
 
-        /* 2. 클래스 선택자: class="highlight"인 요소에만 적용 (앞에점 . 필수) */
-        .highlight {
-            background-color: yellow;
-            font-size: 20px;
+        /* 링크의 밑줄 없애기 (매우 자주 쓰임) */
+        a {
+            text-decoration: none;
+            color: black;
         }
 
-        /* 3. 아이디 선택자: id="header"인 유일한 요소에 적용 (앞에 # 필수) */
-        #header {
-            text-align: center;
-            color: blue;
+        span {
+            font-weight: bold;
+        }
+
+        .post-title {
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Malgun Gothic', sans-serif;
+            color: #333;
+        }
+
+        .nanum-pen-script-regular {
+            font-family: "Nanum Pen Script", cursive;
+            font-weight: 400;
+            font-style: normal;
         }
     </style>
 </head>
 
 <body>
-    <h1 id="header">CSS 시작하기</h1>
-    <p>일반 문단입니다.</p>
-    <p class="highlight">강조된 문단입니다.</p>
+    <h1>중요한 뉴스 제목</h1>
+    <p class="nanum-pen-script-regular">
+        여기는 뉴스 본문입니다. 줄 간격이 너무 좁으면 읽기 힘들기 때문에
+        line-height 속성을 사용하여 여유를 주는 것이 좋습니다.
+    </p>
+    <a href="#">더 보기</a>
+    <p>실습2 css 효과</p>
+    <p>실습2 css 효과2</p>
+    <span>실습2 css 효과</span>
+
+    <p class="post-title">실습3 텍스트에 css 효과 주세요.</p>
+
 </body>
 
 </html>
