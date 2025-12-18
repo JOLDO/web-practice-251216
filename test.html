@@ -1,40 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    
-    <body>
-        <header>
-            <h1>회사로고</h1>
-        </header>
-        <!-- <article><header>글 제목/작성일</header>...</article> -->
-        <h1>태그 복습 및 정리</h1>
-        <h2>div 태그 확인</h2>
-        <div>
-            <h3>임시 제목</h3>
-            <p>임시 내용</p>
-        </div>
-        <h2>span 태그 확인</h2>
-        <p>어떤 내용을 뒤에 붙여도. 붙일수 없다. </p>
-        <span>
-            현재 태그의 콘텐츠 영역 만큼만 차지함.
-        </span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-        <main> 본문 내용 작성하기.
-            <section>
-                <h2>자기소개</h2> ...
-            </section>
-            <section>
-                <h2>포트폴리오</h2> ...
-            </section>
-        </main>
+<body>
+    <header>
+        <h1>회사로고</h1>
+    </header>
+    <!-- <article><header>글 제목/작성일</header>...</article> -->
+    <nav> <a href="#">홈</a> <a href="#">소개</a> </nav>
+    <nav>
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+        </ul>
+    </nav>
+    <h1>태그 복습 및 정리</h1>
+    <h2>div 태그 확인</h2>
+    <div>
+        <h3>임시 제목</h3>
+        <p>임시 내용</p>
+    </div>
+    <h2>span 태그 확인</h2>
+    <p>어떤 내용을 뒤에 붙여도. 붙일수 없다. </p>
+    <span>
+        현재 태그의 콘텐츠 영역 만큼만 차지함.
+    </span>
 
-        <footer>임시 푸터 영역 Copyright 2025</footer>
+    <main> 본문 내용 작성하기.
+        <section>
+            <h2>자기소개</h2> ...
+        </section>
+        <section>
+            <h2>포트폴리오</h2> ...
+        </section>
+        <section>
+            <h2>이미지 크기 예시</h2>
+            <img src="cat.jpg" width="200" height="200" alt="고양이" />
+        </section>
+        <section>
+            <h2>이미지 크기 예시2</h2>
+            <img src="cat.jpg" width="100%" alt="고양이" />
+        </section>
+        <section>
+            <h2>이미지 크기 예시3</h2>
+            <style>
+                .responsive-img {
+                    max-width: 100%;
+                    height: auto;
+                    /* 비율 유지 */
+                }
+            </style>
 
-    </body>
+            <img src="dog.jpg" class="responsive-img" alt="개">
+        </section>
+        <section>
+            <h2>이미지 크기 예시4</h2>
+            <img src="dog.jpg" width="100%" alt="강아지" style="width: 150px; height: 150px; object-fit: fill;">
+        </section>
+        <section>
+            <h2>폼 태그 내부의 input 태그 예시1 -type="password"</h2>
+            <input type="password" placeholder="비번">
+        </section>
+          <section>
+            <h2>폼 태그 내부의 input 태그 예시2 -type="text"</h2>
+            <input type="text" placeholder="이름을 입력하세요">
+        </section>
+          <section>
+            <h2>폼 태그 내부의 input 태그 예시3 -type="email"</h2>
+            <input type="email" placeholder="example@email.com">
+        </section>
+          <section>
+            <h2>폼 태그 내부의 input 태그 예시4 -type="number"</h2>
+           <input type="number" min="1" max="10" value="1">
+        </section>
+    </main>
+
+    <footer>임시 푸터 영역 Copyright 2025</footer>
+
+</body>
 
 </html>
