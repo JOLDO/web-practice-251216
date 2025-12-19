@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 200px;
+            height: 100px;
+            background: white;
+            /* 가로0, 세로4px 이동, 10px만큼 흐리게, 투명도 0.1 검정 */
+            box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .fab-button {
+            width: 50px;
+            height: 50px;
+            /* 이효과를 주면, 동그란 모양이 됩니다. 가끔 프로필 모양으로도 사용함. */
+            /* border-radius: 50%; */
+            /* 세로로 10px 내리고 20px만큼 크게 퍼트림 */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-field {
+            width: 200px;
+            padding: 10px;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>box-shadow 효과 주기 1</h2>
+    <div class="card">
+        효과주기
+    </div>
+
+    <h2>box-shadow 효과 주기 2</h2>
+    <div class="fab-button">
+        Top
+    </div>
+
+    <h2>box-shadow 효과 주기 3</h2>
+    <div class="input-field">
+        Top
+    </div>
+
+
+</body>
+
+</html>
