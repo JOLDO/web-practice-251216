@@ -8,10 +8,11 @@
     <style>
         .container {
             display: flex;
+            flex-wrap: wrap;
         }
 
         .product {
-            flex: 1;
+            width: 50%;
             background-color: lightgray;
             border: 1px solid black;
             box-sizing: border-box;
@@ -19,11 +20,8 @@
         }
 
         @media screen and (max-width: 600px) {
-            .container {
-                flex-direction: column;
-            }
-
             .product {
+                width: 100%;
                 background-color: pink;
             }
         }
@@ -35,18 +33,11 @@
     <div class="container">
         <div class="product">상품1</div>
         <div class="product">상품2</div>
-    </div>
-    <div class="container">
         <div class="product">상품3</div>
         <div class="product">상품4</div>
-    </div>
-    <div class="container">
         <div class="product">상품5</div>
         <div class="product">상품6</div>
-    </div>
-    <div class="container">
         <div class="product">상품7</div>
-        <div class="product">상품8</div>
     </div>
 </body>
 
