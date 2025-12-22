@@ -10,6 +10,18 @@
             content: "NEW! ";
             color: red;
             font-weight: bold;
+            animation: blink 1s linear 0s infinite;
+        }
+
+        /* 지난 시간에 배운 애니메이션 효과주기 */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
         }
     </style>
 </head>
