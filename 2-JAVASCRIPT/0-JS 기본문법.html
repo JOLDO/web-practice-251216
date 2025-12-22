@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+    기본 개념(Basic Concept) JavaScript(JS): 웹 브라우저가 유일하게 이해하는 프로그래밍 언어 
+    변수(Variable) : 데이터를 담아두는 이름표가 붙은 상자, 나중에 꺼내 쓰거나 내용을 바꿀 수 있음
+    상수(Constant) : 한번 담으면 내용을 바꿀 수 없는 잠긴 상자
+    let(변수)과 const(상수)만 사용하는 것을 강력히 권장 
+    
+    console.log() : 로그 출력하는 함수.
+    1)웹 브라우저의 콘솔 (웹 브라우저 -> f12 -> console로 로그 확인)
+    2)vscode의 파일안에서 작업 (웹 브라우저 -> f12 -> console로 로그 확인)
+	    2-1) .js 파일안에서 작성
+	    2-2)<script> 태그를 이용하는 방법
+    -> vscode에서, 자바스크립트 이용해보기.
+       - html 파일안에서
+       - body 태그 안에 -> <script></script> 사이에
+       - 변수, 상수 선언 및 할당하고, 출력 해보기.
+       - 라이브 서버 -> 우클릭을 시작-> 웹브라우저 f12 -> console 탭에서 확인.
+    
+    웹 브라우저에서 -> 개발자도구 f12 -> 최초 복붙 시도시 안됨 -> allow pasting를 console에 수동 입력
+    -->
+    <h1>f12 를 눌러 확인은 콘솔 탭에서 해주세요. </h1>
+    <p>JS 자바스크립트를, html 파일안에서 사용시 script 태그를 이용함</p>
+    <script>    //<script>태그 안에서 사용함
+        // 1. 변수 , 상수 선언 
+        let myName = "오태흔";
+        const pi = 3.14;
+        // 2. 값 확인, 콘솔에서 확인. console.log()이용해서 출력.
+        console.log(myName);
+        console.log(pi);
+        // 3. 변수 값 변경, let 이름을 사용시, 같은 이름 사용 못함. 
+        myName = "오태흔2";
+        // 4. 상수 값 변경 시도, const 이름을 사용시, 같은 이름 사용 못함.
+        //pi = 3.142;   //상수 값 변경 불가
+        // 5. alert() 함수 이용해서 출력. 웹 브라우저에서 경고창으로 띄움 
+        alert(myName);
+        alert(pi);
+    </script>
+</body>
+</body>
+
+</html>

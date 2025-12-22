@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. 시나리오(키프레임) 만들기 */
+        @keyframes my-slide {
+            from {
+                margin-left: 0px;
+            }
+
+            /* 시작 (0%) */
+            to {
+                margin-left: 200px;
+            }
+
+            /* 끝 (100%) */
+        }
+
+        /* 2. 요소에 적용하기 */
+        .box {
+            animation-name: my-slide;
+            /* 시나리오 이름 */
+            animation-duration: 2s;
+            /* 재생 시간 */
+            animation-iteration-count: infinite;
+        }
+
+        /* 애니메이션 효과 주기 2 */
+        /* 1. 키프레임 정의: 이름은 'move-color' */
+        @keyframes move-color {
+            0% {
+                left: 0px;
+                background-color: red;
+            }
+
+            50% {
+                left: 200px;
+                background-color: yellow;
+            }
+
+            /* 중간 지점 */
+            100% {
+                left: 0px;
+                background-color: red;
+            }
+        }
+
+        .box2 {
+            position: relative;
+            /* 움직임을 위해 필수 */
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            /* 2. 애니메이션 적용 */
+            animation-name: move-color;
+            animation-duration: 3s;
+            /* 3초 동안 재생 */
+            animation-iteration-count: infinite;
+            /* 무한 반복 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        애니메이션 효과 주기 1
+    </div>
+
+    <div class="box2">
+        애니메이션 효과 주기 2
+    </div>
+</body>
+
+</html>

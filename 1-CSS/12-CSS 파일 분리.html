@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- HTML 파일 안의 <style> 태그에 css작성 했고 이를 “내부 스타일시트(Internal Stylesheet)” 라고 함 -->
+    <!-- <style>
+        body {
+            background-color: lightyellow;
+        }
+
+        h2 {
+            color: orange;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style> -->
+
+    <!-- 실제 현업 프로젝트에서는 99%이상 css를 별도의 파일(.css)로 분리해서 관리함 이름 “외부 스타일시트(External Stylesheet)”라고 함 -->
+    <!-- 
+    외부 스타일시트 사용이유는 
+    -재사용성(Reusability): style.css 파일 하나만 잘 만들어두면 100개의 HTML 페이지에 똑같은 디자인을 공유 할수 있음
+	-유지보수(Maintenance): 사이드의 메인 색상을 바꾸고 싶을때 css 파일 한줄만 수정하면 동시에 수정됨
+	-성능(Performance): 브라우저가 css파일을 한번 다운로드 하면 저장(캐싱)해두기 때문에 페이지 로딩 속도가 빨라짐
+	-가독성: HTML 코드가 깔끔해져서 구조 파악이 쉬워짐
+    -->
+    <link rel="stylesheet" href="/1-CSS/cssFile/style.css">
+</head>
+
+<body>
+    <h2>졸도</h2>
+    <p>졸도</p>
+</body>
+
+</html>

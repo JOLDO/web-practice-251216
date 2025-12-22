@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: gray;
+        }
+
+        /* 1점 */
+        .main-text {
+            /* class */
+            color: yellow !important;
+            /* !important 1000점*/
+        }
+
+        /* 10점 */
+        #title {
+            /* id */
+            color: blue;
+        }
+
+        /* 100점 */
+    </style>
+</head>
+
+<body>
+    <p id="title" class="main-text" style="color: green;"> <!-- 여기에 스타일을 사용하는게 인라인 -->
+        정답은 무슨 색 일까요?
+        !important -> 인라인 -> 아이디 -> 클래스 -> 태그 -> *
+    </p>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Console을 확인하세요</h1>
+    <script>
+        /*
+        비교연산자를 이용해서 참(true)/거짓(false)을 판단
+        | 기호 | 의미 | 예시 | 결과 |
+        | --- | --- | --- | --- |
+        | `>` | ~보다 크다 (초과) | `10 > 5` | `true` |
+        | `<` | ~보다 작다 (미만) | `10 < 5` | `false` |
+        | `>=` | ~보다 크거나 같다 (이상) | `10 >= 10` | `true` |
+        | `<=` | ~보다 작거나 같다 (이하) | `5 <= 10` | `true` |
+        | `===` | **완전히 같다** | `"a" === "a"` | `true` |
+        "100" vs 100 같나요? 다릅니다. 왜? 데이터 타입이 다르니까.
+        완전히 같다 의미 : 1) 데이터 타입 2) 값,  1)과 2)모두 같아야 함
+        | `!==` | **같지 않다** (다르다) | `"a" !== "b"` | `true` |
+
+
+        If 기본 문법
+        if(조건) {
+	        //조건이 참 true일때만 실행
+        } else {
+	        //조건이 거짓 false일때만 실행
+        }
+        */
+
+        // 비밀번호 체크 예시
+        let password = "1234";
+
+        if (password === "1234") {
+            console.log("로그인 성공! 환영합니다.");
+        } else {
+            console.log("비밀번호가 틀렸습니다.");
+        }
+
+        // 점수에 따른 등급 예시 (else if)
+        let score = 85;
+
+        if (score >= 90) {
+            console.log("A학점 입니다.");
+        } else if (score >= 80) {
+            console.log("B학점 입니다."); // 85점이니까 여기가 실행됨
+        } else {
+            console.log("C학점 입니다.");
+        }
+    </script>
+</body>
+
+</html>

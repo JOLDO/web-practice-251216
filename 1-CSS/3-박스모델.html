@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 300px;
+            /* 1. 박스 너비 */
+            background-color: #f0f0f0;
+            /* 배경색 (패딩 영역까지 칠해짐) */
+
+            padding: 20px;
+            /* 2. 안쪽 여백: 글자가 테두리에 딱 붙지 않게 함 */
+            border: 10px solid blue;
+            /* 3. 테두리: 2px 두께의 파란 실선 */
+            margin: 30px;
+            /* 4. 바깥 여백: 다른 요소와 30px 떨어짐 */
+            /* 실제 가로 크기는 300px 주었지만, 웹 브라우저에서 확인 해보니 360px 나온다?
+            뭔가 이상하다. 그래서, 효과를 이용해서, 크기를 지정한 크기만큼만 
+            차지하게 변경하자 */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 웹 브라우저에서 f12 -> ctrl + shift + c로 pdding, border, margin, box의 크기를 확인할수 있음 -->
+    <div class="card">
+        안녕하세요! 박스 모델 테스트입니다.
+        padding이 없으면 글자가 파란 선에 붙어서 답답해 보입니다.
+    </div>
+    <div class="card">
+        두 번째 카드입니다. margin 덕분에 첫 번째 카드와 붙지 않습니다.
+    </div>
+</body>
+
+</html>

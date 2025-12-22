@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h2>테이블 태그 예시1</h2>
+        <table border="1">
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+            </tr>
+            <tr>
+                <td>김철수</td>
+                <td>20세</td>
+            </tr>
+        </table>
+
+    </section>
+
+    <section>
+        <h2>테이블 태그 예시2, 표가 길어질 경우, 검색 엔진이 구조 파악하기 용이함. 권장방식.!! </h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>사용자명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>성춘향</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <section>
+        <h2>테이블 태그 예시3 가로, 세로 병합, 캡션 제목 보여주기 </h2>
+        <table border="1">
+            <caption>주간 식단표</caption>
+            <thead>
+                <tr>
+                    <th>시간</th>
+                    <th>월요일</th>
+                    <th>화요일</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>점심</td>
+                    <td rowspan="2">비빔밥 (세로 병합)</td>
+                    <td>김치찌개</td>
+                </tr>
+                <tr>
+                    <td>저녁</td>
+                    <td>된장찌개</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align:center;">※ 주말 식단은 추후 공지</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+</body>
+
+</html>

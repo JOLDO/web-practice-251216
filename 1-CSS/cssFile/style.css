@@ -1,0 +1,13 @@
+/* css의 기본문법은 key: value 쌍으로 이루어짐 */
+body {
+    background-color: lightyellow;
+}
+
+h2 {
+    color: orange;
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+}

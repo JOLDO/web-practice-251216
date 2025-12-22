@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h2>이미지 크기 예시</h2>
+        <img src="/0-HTML/imageFile/cat.jpg" width="200" height="200" alt="고양이">
+    </section>
+    <section>
+        <h2>이미지 크기 예시2</h2>
+        <img src="/0-HTML/imageFile/dog.jpg" width="100%" alt="개">
+    </section>
+    <section>
+        <h2>이미지 크기 예시3</h2>
+        <style>
+            .responsive-img {
+                max-width: 100%;
+                height: auto;
+                /* 비율 유지 */
+            }
+        </style>
+
+        <img src="/0-HTML/imageFile/cat.jpg" class="responsive-img" alt="고양이">
+    </section>
+    <section>
+        <h2>이미지 크기 예시4- object-fit: cover</h2>
+        <p>영역을 가득 채우도록 비율 유지하며 자름 (가장 많이 사용)</p>
+        <img src="/0-HTML/imageFile/dog.jpg" width="100%" alt="개"
+            style="width: 150px; height: 150px; object-fit: cover;">
+    </section>
+    <section>
+        <h2>이미지 크기 예시5-object-fit: fill</h2>
+        <p>기본값. 영역에 맞춰 이미지를 늘림 (비율 깨짐)</p>
+        <img src="/0-HTML/imageFile/dog.jpg" width="100%" alt="개"
+            style="width: 150px; height: 150px; object-fit: fill;">
+    </section>
+    <section>
+        <h2>이미지 크기 예시6-object-fit: contain</h2>
+        <p>이미지 전체가 보이도록 비율을 유지하며 맞춤 (여백 생길 수 있음)</p>
+        <img src="/0-HTML/imageFile/dog.jpg" width="100%" alt="개"
+            style="width: 150px; height: 150px; object-fit: contain;">
+    </section>
+</body>
+
+</html>
