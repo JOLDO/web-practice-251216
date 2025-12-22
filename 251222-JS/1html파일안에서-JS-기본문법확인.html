@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>f12를 눌러 확인은 콘솔 탭에서 해주세요.</h1>
+    <p>JS 자바스크립트를 html 파일안에서 사용시 script 태그를 이용함</p>
+    <h1>Console을 확인하세요</h1>
+    <script>
+        //1. 변수, 상수 선언
+        let myName = "오태흔";
+        const pi = 3.14;
+        //2. 값 확인, 콘솔에서 확인. console.log()이요해서 출력.
+        console.log(myName);
+        console.log(pi);
+        //3. 변수 값 변경
+        //같은 이름 사용 못함.
+        let myName2 = "오태흔2";
+        //4. 상수 값 변경 시도(안됨)
+        //같은 이름 사용 못함.
+        let pi2 = 3.142;
+        //5. alert() 함수 이용해서 출력.
+        alert(myName);
+        alert(pi);
+
+
+        // 1. 숫자 연산 (Number)
+        let price = 1000;
+        let count = 5;
+        let total = price * count; // 1000 * 5
+        console.log(total); // 5000 출력
+
+        // 2. 문자열 연결 (String)
+        let myName3 = "김코딩";
+        let greeting = "반갑습니다, " + myName3 + "님!";
+        console.log(greeting); // "반갑습니다, 김코딩님!" 출력
+
+        // 3. 주의할 점 (문자와 숫자의 결합)
+        let num1 = 10;
+        let num2 = "10"; // 따옴표가 있으므로 문자열!
+
+        console.log(num1 + num1); // 20 (숫자 + 숫자 = 더하기)
+        console.log(num1 + num2); // "1010" (숫자 + 문자 = 이어붙이기)
+    </script>
+</body>
+
+</html>
