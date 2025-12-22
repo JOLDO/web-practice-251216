@@ -1,0 +1,11 @@
+a[href*="https"] {
+    color: green;
+    font-weight: bold;
+}
+
+/* .pdf로 끝나는 링크 옆에 (PDF) 텍스트 추가 */
+a[href$=".pdf"]::after {
+    content: " (PDF 문서)";
+    color: red;
+    font-size: 12px;
+}

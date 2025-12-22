@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>실습4</title>
     <style>
-        a[href^="mailto:"] {
+        a[href^="mailto"]{
             color: purple;
 
         }
+        a[href^="mailto"]:hover {
+            color: aqua;
+
+        }
+
+        a[href*="010"] {
+            color: yellow
+        }
 
         a[href$=".png"] {
-            color: lightgray;
+            background-color: lightgray;
 
+        }
+        a[href$=".png"]:active {
+            color: white
+        }
+
+        a[href="/images/logo.jpg"] {
+            color: green;
         }
     </style>
 </head>
@@ -22,8 +37,8 @@
     <div class="link-list">
         <a href="mailto:user@example.com">이메일 보내기</a>
         <a href="tel:010-1234-5678">전화 걸기</a>
-        <a href="/images/photo.png">사진.png</a>
-        <a href="/images/logo.jpg">로고.jpg</a>
+        <a href="/251222/images/photo.png">사진.png</a>
+        <a href="images/logo.jpg">로고.jpg</a>
     </div>
 </body>
 
