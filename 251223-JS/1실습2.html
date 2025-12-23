@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습2</title>
+</head>
+
+<body>
+    <button id="myButton">버튼</button>
+    <script>
+        const btn = document.getElementById("myButton");
+
+        btn.addEventListener("click",  function printTwoDan() {
+            for (let i = 1; i < 10; i++) {
+                console.log(2 * i);
+            }
+        });
+
+    </script>
+</body>
+
+</html>

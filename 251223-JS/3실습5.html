@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습5</title>
+</head>
+
+<body>
+    <input type="text" id="nameInput" placeholder="이름을 입력하세요">
+    <button id="greetBtn">입력 완료</button>
+    <h2 id="resultText">여기 인사말이 나옵니다.</h2>
+    <script>
+        const inputTag = document.getElementById('nameInput');
+        const buttonTag = document.getElementById('greetBtn');
+        const h2Tag = document.getElementById('resultText');
+
+        buttonTag.addEventListener('click', function () {
+            if (inputTag.value == "") {
+                alert("이름이 없습니다.");
+            } else {
+                h2Tag.innerText = "반갑습니다, " + inputTag.value + "님!";
+                inputTag.value = "";
+            }
+        });
+    </script>
+</body>
+
+</html>
