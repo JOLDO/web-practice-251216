@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습12</title>
+</head>
+
+<body>
+    <input type="text" id="itemInput" placeholder="사고 싶은 물건">
+    <button id="addBtn">담기</button>
+    <ul id="itemList"></ul>
+    <button id="newBtn">뉴버튼</button>
+    <section id="testSection"></section>
+    <script>
+        let cart = [];
+
+        const input = document.getElementById('itemInput');
+        const btn = document.getElementById('addBtn');
+        const itemList = document.getElementById('itemList');
+        const newBtn = document.getElementById('newBtn');
+        const testSection = document.getElementById('testSection');
+
+        btn.addEventListener('click', function () {
+            const item = input.value; // 1. 입력값 가져오기
+
+            if (item !== "") {
+                cart.push(item); // 2. 배열에 추가하기 (핵심!)
+
+                // 확인용 알림 (현재 담긴 목록 전체를 보여줌)
+                alert("현재 장바구니: " + cart);
+                itemList.innerHTML += "<li>" + item + "</li>";
+                testSection.innerHTML += "<h2>" + item + "</h2>";
+                input.value = ""; // 3. 입력창 비우기
+            }
+        });
+
+        newBtn.addEventListener('click', function () {
+            const item = input.value;
+
+            if (item !== "") {
+                cart.push(item);
+                itemList.innerHTML += "<li>" + item + "</li>";
+                testSection.innerHTML += "<h2>" + item + "</h2>";
+                input.value = "";
+            }
+        });     
+    </script>
+</body>
+
+</html>

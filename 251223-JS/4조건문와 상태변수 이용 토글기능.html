@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="modeBtn">다크 모드 켜기</button>
+    <h1 id="text">안녕하세요!</h1>
+    <script>
+        const btn = document.getElementById('modeBtn');
+        //핵심개념1. 상태변수 이용하기.
+        let isDark = false; // 현재 다크 모드인지 기억하는 변수 (처음엔 false)
+
+        btn.addEventListener('click', function () {
+            if (isDark === false) {
+                // 다크 모드가 아닐 때 -> 다크 모드로 변경
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white';
+                btn.innerText = "라이트 모드 켜기"; // 버튼 글자도 변경
+                isDark = true; // 상태 업데이트 (이제 다크모드임)
+            } else {
+                // 다크 모드일 때 -> 원래대로 복구
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black';
+                btn.innerText = "다크 모드 켜기";
+                isDark = false; // 상태 업데이트 (이제 다크모드 아님)
+            }
+        });
+    </script>
+</body>
+
+</html>

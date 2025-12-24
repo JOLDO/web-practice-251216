@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습6</title>
+</head>
+
+<body>
+    <input type="password" id="passInput" value="mypassword123">
+    <button id="viewBtn">비밀번호 보기</button>
+    <script>
+        const myInput = document.getElementById('passInput');
+        const myBtn = document.getElementById('viewBtn');
+
+        let isVisible = false;
+
+        myBtn.addEventListener('click', function () {
+            if (isVisible) {
+                isVisible = false;
+                myInput.type = "password";
+                myBtn.innerText = "비밀번호 보기";
+            } else {
+                isVisible = true;
+                myInput.type = "text";
+                myBtn.innerText = "비밀번호 숨기기";
+            }
+        });
+    </script>
+</body>
+
+</html>
