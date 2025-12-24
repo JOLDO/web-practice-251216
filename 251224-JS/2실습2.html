@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="profileCard"></div>
+    <script>
+        const developer = {
+            name: "김코딩",
+            role: "웹 개발자",
+            skills: ["HTML", "CSS", "JavaScript"],
+            isLeader: true
+        };
+
+        const card = document.getElementById('profileCard');
+        card.innerHTML = `
+            <h1>이름: ${developer.name}<h1>
+            <h3>역할: ${developer.role}</h3>
+            <h3>기술</h3>
+            <h5>${developer.skills.join("<br>")}</h5>
+            <h3>${developer.isLeader ? "팀장" : "팀원"}</h3>
+        `;
+    </script>
+</body>
+
+</html>

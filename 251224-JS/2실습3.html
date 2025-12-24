@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="postBox"></div>
+<button id="likeBtn">좋아요 누르기</button>
+    <script>
+        const postBox = document.getElementById('postBox');
+        const btn = document.getElementById('likeBtn');
+        let post = { title: "오늘의 일기", likes: 0 };
+
+        render();
+        btn.addEventListener('click', function() {
+            post.likes++;
+            render();
+        });
+
+        function render() {
+            postBox.innerHTML = `
+                <h3>제목 : ${post.title}</h3>
+                <p>좋아요 : ${post.likes}개</p>
+            `;
+        }
+    </script>
+</body>
+
+</html>

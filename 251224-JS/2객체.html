@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="card"></div>
+    <script>
+        // 1. 데이터 준비 (객체)
+        let phone = {
+            model: "갤럭시 S24",
+            price: 1150000,
+            isStock: true // 재고 있음
+        };
+
+        // 2. 화면 요소 가져오기
+        const cardBox = document.getElementById('card');
+
+        // 3. 객체의 정보를 꺼내서 HTML로 만들기
+        // phone.model, phone.price 처럼 점(.)으로 콕 집어서 가져옵니다.
+        // 조건부 렌더링 => 조건 ? 참 : 거짓
+        cardBox.innerHTML = 
+        `
+            <h3>제품명: ${phone.model}</h3>
+            <p>가격: ${phone.price}원</p>
+            <p>재고상태: ${phone.isStock ? "구매가능" : "품절"}</p>
+        `;
+    </script>
+</body>
+
+</html>
