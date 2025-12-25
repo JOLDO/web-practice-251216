@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 기본 함수
+        function cry() {
+            console.log("엉엉ㅠㅠ");
+        }
+
+        // 함수 호출 (부르지 않으면 실행되지 않습니다!)
+        cry();
+        cry();
+
+        // 2. 입력값을 받는 함수 (더하기 기계)
+        /**
+        * @param {number} a
+        * @param {number} b
+        */
+        function plus(a, b) {
+            if (typeof a === "boolean" || typeof b === "boolean") {
+                alert("타입이 맞이 않습니다.")
+                throw new Error("타입이 맞지 않습니다.");
+            }
+            let result = a + b;
+            console.log(result);
+            return result
+            // console.log("두 수의 합은: " + result);
+
+        }
+
+        alert(plus(10, 20)); // 30 출력
+        plus(100, 50); // 150 출력
+        plus(true, 1);
+    </script>
+</body>
+
+</html>

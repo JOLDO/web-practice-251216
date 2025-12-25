@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습4</title>
+    <style>
+        #frog-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .divTag {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>페페 리스트</h2>
+    <div id="frog-list"></div>
+    <script>
+        const frogs = [
+            { frog: "페페1", img: "페페1.jpg" },
+            { frog: "페페2", img: "페페2.jpg" },
+            { frog: "페페3", img: "페페3.jpg" }
+        ];
+
+        const frogContainer = document.getElementById('frog-list');
+
+        frogs.map(frog => (
+            frogContainer.innerHTML += `
+            <div class="divTag">
+                <h1>${frog.frog}</h1>
+                <img src=${frog.img} width="200px" alt="${frog.frog}">
+            </div>
+            `
+        ));
+
+        // frogs.forEach(function(frog) {
+        //     frogContainer.innerHTML += `
+        //     <div style="border:1px solid gray;">
+        //     <h1>${frog.frog}</h1>
+        //     <img src=${frog.img} width="200px" alt="${frog.frog}">
+        //     </div>
+        //     `
+        // })
+    </script>
+</body>
+
+</html>

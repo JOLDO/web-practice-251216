@@ -31,9 +31,10 @@
 
         /* 애니메이션 효과 주기 2 */
         /* 1. 키프레임 정의: 이름은 'move-color' */
+
         @keyframes move-color {
             0% {
-                left: 0px;
+                left: 0px;  
                 background-color: red;
             }
 
@@ -51,17 +52,19 @@
 
         .box2 {
             position: relative;
+            /* 애니메이션에서 left로 가로 이동 조절을 하기때문에 필요 */
             /* 움직임을 위해 필수 */
             width: 100px;
             height: 100px;
             background-color: red;
 
             /* 2. 애니메이션 적용 */
-            animation-name: move-color;
-            animation-duration: 3s;
+            /* animation-name: move-color;
+            animation-duration: 3s; */
             /* 3초 동안 재생 */
-            animation-iteration-count: infinite;
+            /* animation-iteration-count: infinite; */
             /* 무한 반복 */
+            animation: move-color 3s linear 3s infinite;
         }
     </style>
 </head>
