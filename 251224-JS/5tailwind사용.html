@@ -24,15 +24,29 @@
     <h1 class="text-3xl font-bold text-blue-600">
         안녕 Tailwind!
     </h1>
+    <h2>Tailwind vs 기존 css 비교 </h2>
 
-    <h2>
-        기존
-    </h2>
+    <h3>기존 css</h3>
     <button class="my-btn">test</button>
-    <h2>
-        테일윈드
-    </h2>
-    <button>test</button>
+
+    <h3>Tailwind css</h3>
+    <button class="bg-blue-500 text-white p-2 rounded hover:bg-blue-700">
+        test2</button>
+    <!-- <div style="border:1px solid #ddd; margin:10px; padding:10px;"></div> -->
+
+    <h3>flex 배치 관련 예시 </h3>
+    <div class="flex justify-between items-center bg-gray-200 p-4">
+        <div>왼쪽 메뉴</div>
+        <div>중간 메뉴1</div>
+        <div>가운데 메뉴</div>
+        <div>중간 메뉴2</div>
+        <div>오른쪽 메뉴</div>
+    </div>
+
+    <h3>텍스트 꾸미기 예시</h3>
+    <div class="border border-gray-300 rounded-lg shadow-md p-5">
+        <h2 class="text-2xl font-bold text-indigo-600">멋진 제목</h2>
+    </div>
 </body>
 
 </html>
