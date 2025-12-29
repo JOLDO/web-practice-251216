@@ -3,6 +3,32 @@ const input = document.getElementById('taskInput');
 const addBtn = document.getElementById('addBtn');
 const listContainer = document.getElementById('taskList');
 
+// 순서15
+const searchBox = document.getElementById('searchBox');
+const searchBtn = document.getElementById('searchBtn');
+
+// 이벤트 리스너(경비원) 추가 , 무엇을 감지? 키보드를 입력 후
+// 키를 누른 상태를 down, 키를 떼는 순간을 up. 이벤트 감지
+searchBox.addEventListener('keyup', function () {
+    // const keyword = searchBox.value; // 검색어 가져오기
+
+    // // 검색어가 포함된 것만 필터링, 검색어를 포함한 새로운 요소를 뽑아낸다.
+    // const filteredData = todoData.filter(item => item.text.includes(keyword));
+
+    // // 검색어가 포함된 배열를 출력하기.
+    // render(filteredData);
+});
+
+searchBtn.addEventListener('click', function () {
+    const keyword = searchBox.value; // 검색어 가져오기
+
+    // 검색어가 포함된 것만 필터링, 검색어를 포함한 새로운 요소를 뽑아낸다.
+    const filteredData = todoData.filter(item => item.text.includes(keyword));
+
+    // 검색어가 포함된 배열를 출력하기.
+    render(filteredData);
+});
+
 let todoList = [];
 
 //251226
@@ -16,35 +42,37 @@ render(todoData);
 // 그리기 함수 정의 - 함수명은 보통 소문자로 시작.
 function render(dataArray) {
 
-	//항상 기본, 데이터를 모두 삭제하고 시작한다.
-	//기존 내용을 다 지우고
-	listContainer.innerHTML = "";
+    //항상 기본, 데이터를 모두 삭제하고 시작한다.
+    //기존 내용을 다 지우고
 
-	//새로 요소를 그릴 예정. 새로고침 효과.
-	//기반이 데이터를 중심으로 한다. 그 데이터는 배열에 들어있다.
-	//배열과 반복문을 같이 사용하는 소개. forEach(function() {});, 이 기법 사용
-	todoData.forEach(function(todo) {
-		listContainer.innerHTML += `
-		<li>
-			<span>${todo.text}</span>
-			<div>
-				<button class="edit-btn" onclick="updateTodo(${todo.id})">
-					수정
-				</button>
-				<button class="del-btn" onclick="deleteTodo(${todo.id})">
-					삭제
-				</button>
-			</div>
-		</li>
-		`;
-	});
+    listContainer.innerHTML = "";
+
+    dataArray.forEach(function (dataArray) {
+        listContainer.innerHTML += `
+            <li>
+                <span>${dataArray.text}</span>
+                <div>
+                    <button class="edit-btn" onclick="updateTodo(${dataArray.id})">
+                        수정
+                    </button>
+                    <button class="del-btn" onclick="deleteTodo(${dataArray.id})">
+                        삭제
+                    </button>
+                </div>
+            </li>
+            `;
+    });
+    //새로 요소를 그릴 예정. 새로고침 효과.
+    //기반이 데이터를 중심으로 한다. 그 데이터는 배열에 들어있다.
+    //배열과 반복문을 같이 사용하는 소개. forEach(function() {});, 이 기법 사용
+
 }
 // 순서3
 // 추가, 삭제하는 로직을 배열 형식으로 작업방법으로 변경.
 // 추가 기능(데이터 추가 -> 그리기)
 function addTodo() {
     // 할일 입력창에 문자열이 없는 경우에는 경고창을 띄움
-    if(input.value === "") {
+    if (input.value === "") {
         alert("내용을 필수로 입력해주세요.");
         return; //addTodo 함수를 중단.
     }
@@ -72,9 +100,9 @@ addBtn.addEventListener('click', addTodo)
 // 순서5
 // 삭제 기능(배열에서 데이터 제외 -> 그리기)
 function deleteTodo(id) {
-    if(confirm("정말 삭제하시겠습니까?")){
+    if (confirm("정말 삭제하시겠습니까?")) {
         // 해당 id가 아닌 것만 남기기(필터링)
-        todoData = todoData.filter(item => item.id !==id);
+        todoData = todoData.filter(item => item.id !== id);
         // 예시) 인덱스     0      1      2
         // 가정) id       0      1      2
         // todoData = ["사과","바나나", "딸기"]
@@ -101,7 +129,7 @@ function deleteTodo(id) {
 // 예시)
 // 순서6
 function save() {
-	localStorage.setItem("myTodos", JSON.stringify(todoData));
+    localStorage.setItem("myTodos", JSON.stringify(todoData));
 }
 
 // 불러오기
@@ -151,16 +179,16 @@ function save() {
 // 3)그리고 저장하고 
 // 4)다시 그리기.
 function updateTodo(id) {
-	const item = todoData.find(item => item.id === id);	//수정할 대상 찾기
-	const newText = prompt("내용을 수정하세요: ", item.text);   //item.text의 값이 프롬프트에 기본적으로 적히게 한다.
-	
-	//기본 유효성 체크
-	//newText !== null: 객체가 비어있으면 안됨.
-	//newText.trim(): 내용의 양쪽 공백을 모두 제거 후, 빈문자열이 아니어야 한다.
-	//그러면 수정	
-	if(newText !== null && newText.trim() !== "") {
-		item.text = newText;	//내용 변경
-		save();	//저장
-		render(todoData);		//내용 그리기
-	}
+    const item = todoData.find(item => item.id === id);	//수정할 대상 찾기
+    const newText = prompt("내용을 수정하세요: ", item.text);   //item.text의 값이 프롬프트에 기본적으로 적히게 한다.
+
+    //기본 유효성 체크
+    //newText !== null: 객체가 비어있으면 안됨.
+    //newText.trim(): 내용의 양쪽 공백을 모두 제거 후, 빈문자열이 아니어야 한다.
+    //그러면 수정	
+    if (newText !== null && newText.trim() !== "") {
+        item.text = newText;	//내용 변경
+        save();	//저장
+        render(todoData);		//내용 그리기
+    }
 }
